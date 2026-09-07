@@ -300,35 +300,49 @@
                     </div>
                 </div>
 
-                <!-- Responses Tracker Card -->
-                <div
-                    class="col-span-4 md:col-span-5 relative mt-8 md:mt-0 h-[380px] sm:h-[400px] rounded-2xl overflow-hidden glass-panel flex items-center justify-center shadow-[0_12px_40px_rgba(19,27,46,0.06)] border border-outline-variant">
-                    <div class="absolute inset-0 opacity-25 pointer-events-none"
-                        style="background-image: radial-gradient(#006c49 1.2px, transparent 1.2px); background-size: 24px 24px;">
+                <!-- Responses Tracker Card Column -->
+                <div class="col-span-4 md:col-span-5 relative mt-8 md:mt-0 flex flex-col items-center">
+                    <div
+                        class="w-full h-[380px] sm:h-[400px] rounded-2xl overflow-hidden glass-panel flex items-center justify-center shadow-[0_12px_40px_rgba(19,27,46,0.06)] border border-outline-variant relative">
+                        <div class="absolute inset-0 opacity-25 pointer-events-none"
+                            style="background-image: radial-gradient(#006c49 1.2px, transparent 1.2px); background-size: 24px 24px;">
+                        </div>
+                        <div class="text-center p-8 relative z-10 w-full max-w-xs">
+                            <span class="material-symbols-outlined text-6xl text-secondary mb-4 block mx-auto"
+                                style="font-variation-settings: 'FILL' 1;">groups</span>
+                            <div class="font-display-lg text-4xl sm:text-display-lg text-primary tracking-tight font-bold"
+                                id="hero-count-display">14/50</div>
+                            <div
+                                class="font-label-md text-label-md text-on-surface-variant uppercase tracking-widest mt-2 font-semibold">
+                                Responses Collected</div>
+
+                            <!-- Inside badge below text -->
+                            <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container border border-outline-variant/70 text-[11px] font-medium text-on-surface-variant mt-2.5 shadow-xs">
+                                <span class="material-symbols-outlined text-secondary text-sm">schedule</span>
+                                <span>Closing in: <strong id="card-countdown-display" class="text-primary font-semibold font-mono">--d --h</strong></span>
+                            </div>
+
+                            <div class="w-full bg-surface-container h-2.5 rounded-full mt-6 overflow-hidden">
+                                <div class="bg-secondary h-full rounded-full transition-all duration-700 ease-out"
+                                    id="hero-progress-bar" style="width: 28%;"></div>
+                            </div>
+                            <div class="font-label-sm text-label-sm text-on-surface-variant mt-3 text-right"
+                                id="hero-remaining-display">36 more to launch</div>
+
+                            <div
+                                class="mt-6 pt-4 border-t border-outline-variant/40 flex items-center justify-between text-xs text-on-surface-variant">
+                                <span>Status: <strong class="text-secondary font-semibold">14 Submissions
+                                        Active</strong></span>
+                                <span class="cursor-pointer hover:underline text-secondary font-medium"
+                                    onclick="scrollToSection('tracker')">View Watchlist ↓</span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="text-center p-8 relative z-10 w-full max-w-xs">
-                        <span class="material-symbols-outlined text-6xl text-secondary mb-4 block mx-auto"
-                            style="font-variation-settings: 'FILL' 1;">groups</span>
-                        <div class="font-display-lg text-4xl sm:text-display-lg text-primary tracking-tight font-bold"
-                            id="hero-count-display">14/50</div>
-                        <div
-                            class="font-label-md text-label-md text-on-surface-variant uppercase tracking-widest mt-2 font-semibold">
-                            Responses Collected</div>
 
-                        <div class="w-full bg-surface-container h-2.5 rounded-full mt-8 overflow-hidden">
-                            <div class="bg-secondary h-full rounded-full transition-all duration-700 ease-out"
-                                id="hero-progress-bar" style="width: 28%;"></div>
-                        </div>
-                        <div class="font-label-sm text-label-sm text-on-surface-variant mt-3 text-right"
-                            id="hero-remaining-display">36 more to launch</div>
-
-                        <div
-                            class="mt-6 pt-4 border-t border-outline-variant/40 flex items-center justify-between text-xs text-on-surface-variant">
-                            <span>Status: <strong class="text-secondary font-semibold">14 Submissions
-                                    Active</strong></span>
-                            <span class="cursor-pointer hover:underline text-secondary font-medium"
-                                onclick="scrollToSection('tracker')">View Watchlist ↓</span>
-                        </div>
+                    <!-- Countdown below Responses Collected card -->
+                    <div class="mt-3.5 w-full max-w-xs sm:max-w-none flex items-center justify-center gap-2 py-2.5 px-4 rounded-xl bg-surface-container/90 border border-outline-variant text-xs text-on-surface-variant shadow-sm">
+                        <span class="material-symbols-outlined text-secondary text-base">hourglass_bottom</span>
+                        <span>Survey Countdown: <strong id="countdown-display" class="font-bold text-primary font-mono">-- Days, -- Hours</strong> (30 Sept 2026)</span>
                     </div>
                 </div>
             </div>
@@ -1255,10 +1269,41 @@
             });
         });
 
+        // Countdown to 30 September 2026 at hour level
+        function updateCountdown() {
+            // Target: 30 September 2026, 23:59:59 GMT+05:30
+            const targetDate = new Date('2026-09-30T23:59:59+05:30').getTime();
+            const now = new Date().getTime();
+            const diff = targetDate - now;
+
+            if (diff <= 0) {
+                if (document.getElementById('countdown-display')) {
+                    document.getElementById('countdown-display').textContent = 'Submissions Closed';
+                }
+                if (document.getElementById('card-countdown-display')) {
+                    document.getElementById('card-countdown-display').textContent = 'Closed';
+                }
+                return;
+            }
+
+            const totalHours = Math.floor(diff / (1000 * 60 * 60));
+            const days = Math.floor(totalHours / 24);
+            const remainingHours = totalHours % 24;
+
+            if (document.getElementById('countdown-display')) {
+                document.getElementById('countdown-display').textContent = `${days} Days, ${remainingHours} Hours`;
+            }
+            if (document.getElementById('card-countdown-display')) {
+                document.getElementById('card-countdown-display').textContent = `${days}d ${remainingHours}h left`;
+            }
+        }
+
         // Initialization
         window.addEventListener('DOMContentLoaded', () => {
             initResponseCounter();
             renderStocksTable();
+            updateCountdown();
+            setInterval(updateCountdown, 60000);
         });
     </script>
 </body>
