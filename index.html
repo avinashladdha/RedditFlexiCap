@@ -304,7 +304,7 @@
                 <!-- Responses Tracker Card Column -->
                 <div class="col-span-4 md:col-span-5 relative mt-8 md:mt-0 flex flex-col items-center">
                     <div
-                        class="w-full h-[380px] sm:h-[400px] rounded-2xl overflow-hidden glass-panel flex items-center justify-center shadow-[0_12px_40px_rgba(19,27,46,0.06)] border border-outline-variant relative">
+                        class="w-full h-[380px] sm:h-[200px] rounded-2xl overflow-hidden glass-panel flex items-center justify-center shadow-[0_12px_40px_rgba(19,27,46,0.06)] border border-outline-variant relative">
                         <div class="absolute inset-0 opacity-25 pointer-events-none"
                             style="background-image: radial-gradient(#006c49 1.2px, transparent 1.2px); background-size: 24px 24px;">
                         </div>
@@ -312,10 +312,10 @@
                             <span class="material-symbols-outlined text-6xl text-secondary mb-4 block mx-auto"
                                 style="font-variation-settings: 'FILL' 1;">groups</span>
                             <div class="font-display-lg text-4xl sm:text-display-lg text-primary tracking-tight font-bold"
-                                id="hero-count-display">14/50</div>
+                                id="hero-count-display"></div>
                             <div
                                 class="font-label-md text-label-md text-on-surface-variant uppercase tracking-widest mt-2 font-semibold">
-                                Responses Collected</div>
+                                >20 Responses Collected</div>
 
                             <!-- Inside badge below text -->
                             <div
@@ -325,20 +325,8 @@
                                         class="text-primary font-semibold font-mono">--d --h</strong></span>
                             </div>
 
-                            <div class="w-full bg-surface-container h-2.5 rounded-full mt-6 overflow-hidden">
-                                <div class="bg-secondary h-full rounded-full transition-all duration-700 ease-out"
-                                    id="hero-progress-bar" style="width: 28%;"></div>
-                            </div>
-                            <div class="font-label-sm text-label-sm text-on-surface-variant mt-3 text-right"
-                                id="hero-remaining-display">36 more to launch</div>
 
-                            <div
-                                class="mt-6 pt-4 border-t border-outline-variant/40 flex items-center justify-between text-xs text-on-surface-variant">
-                                <span>Status: <strong class="text-secondary font-semibold">14 Submissions
-                                        Active</strong></span>
-                                <span class="cursor-pointer hover:underline text-secondary font-medium"
-                                    onclick="scrollToSection('tracker')">View Watchlist ↓</span>
-                            </div>
+
                         </div>
                     </div>
 
@@ -350,224 +338,48 @@
                                 class="font-bold text-primary font-mono">-- Days, -- Hours</strong> (30 Sept
                             2026)</span>
                     </div>
-                </div>
-            </div>
-        </section>
 
-        <!-- Dedicated Prominent Disclaimer & SEBI Disclosures Block on First Page -->
-        <section class="py-12 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto" id="disclaimers">
-            <div
-                class="rounded-2xl border-2 border-amber-500/40 bg-gradient-to-b from-amber-50/70 to-surface-container-lowest p-6 sm:p-10 shadow-sm relative overflow-hidden">
-                <div class="flex items-center gap-3 mb-4">
-                    <span class="text-2xl sm:text-3xl">⚠️</span>
-                    <div>
-                        <h2 class="font-headline-md text-xl sm:text-2xl font-bold text-amber-950">
-                            Community Watchlist Disclaimer &amp; SEBI Disclosures
-                        </h2>
-                        <p class="text-xs sm:text-sm font-semibold text-amber-800 tracking-wide uppercase mt-0.5">
-                            For Educational, Theoretical &amp; Case Study Purposes Only
-                        </p>
-                    </div>
-                </div>
+                    <!-- Equal-Weighted Portfolio Return Callout -->
+                    <div class="mt-3.5 w-full max-w-xs sm:max-w-none rounded-2xl overflow-hidden glass-panel shadow-[0_8px_24px_rgba(0,108,73,0.1)] border border-secondary/30 relative">
+                        <div class="p-5">
+                            <div class="flex items-center justify-between mb-3">
+                                <div class="flex items-center gap-2">
+                                    <span class="material-symbols-outlined text-secondary text-lg" style="font-variation-settings: 'FILL' 1;">trending_up</span>
+                                    <span class="text-xs font-bold uppercase tracking-wider text-secondary">Equal-Weighted Return</span>
+                                </div>
+                                <span class="text-[10px] uppercase font-semibold px-2 py-0.5 rounded bg-emerald-50 text-secondary border border-emerald-200">34 Stocks</span>
+                            </div>
+                            
+                            <div class="flex items-baseline gap-3 mb-2">
+                                <span class="font-display-lg text-3xl sm:text-4xl font-bold font-mono tracking-tight text-secondary" id="hero-portfolio-return">+4.77%</span>
+                                <span class="text-xs font-medium text-on-surface-variant">30 Sept → 18 Nov 2026</span>
+                            </div>
 
-                <p class="text-sm sm:text-base text-on-surface leading-relaxed mb-6 font-normal">
-                    This equal-weighted community watchlist and all associated discussions are built strictly for
-                    educational, learning, and entertainment purposes. It is a collaborative experiment to study market
-                    fundamentals and business metrics. It does not represent a professional recommendation, a
-                    &quot;model portfolio,&quot; or a structurally sound financial plan. Please note: we own no rights
-                    to the name &quot;Reddit FlexiCap&quot; — it was simply a random name which the community seemed to
-                    like, and we have put it here solely as an informal project identifier.
-                </p>
+                            <div class="w-full bg-surface-container h-2 rounded-full overflow-hidden my-3 flex">
+                                <div class="bg-secondary h-full transition-all duration-700" id="return-gainers-bar" style="width: 61.8%;"></div>
+                                <div class="bg-red-400 h-full transition-all duration-700" id="return-losers-bar" style="width: 38.2%;"></div>
+                            </div>
 
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 pt-6 border-t border-amber-500/20">
-                    <!-- Important Disclosures & Risk Warnings -->
-                    <div class="space-y-4">
-                        <h3 class="font-semibold text-primary text-base flex items-center gap-2">
-                            <span class="material-symbols-outlined text-amber-700 text-lg">warning</span>
-                            <span>Important Disclosures &amp; Risk Warnings</span>
-                        </h3>
-                        <ul class="space-y-3 text-xs sm:text-sm text-on-surface-variant leading-relaxed">
-                            <li>
-                                <strong class="text-primary font-semibold">Not Financial Advice:</strong> The
-                                information, stock selections, and discussions provided here are not intended to be, and
-                                should not be construed as, financial, investment, or trading advice.
-                            </li>
-                            <li>
-                                <strong class="text-primary font-semibold">No Buy/Sell Actionable Calls:</strong> We do
-                                not provide entry prices, target prices, or stop-loss levels. Discussions are focused on
-                                theoretical analysis, not on predicting short-term price movements.
-                            </li>
-                            <li>
-                                <strong class="text-primary font-semibold">Not Tailored to You:</strong> This watchlist
-                                could be 100% wrong for your personal situation. It does not factor in your individual
-                                financial goals, time horizon, liquidity needs, or risk appetite. Absolutely do not rely
-                                on this list to make your own financial decisions.
-                            </li>
-                            <li>
-                                <strong class="text-primary font-semibold">Do Your Own Research (DYOR):</strong> You are
-                                solely responsible for your own investment choices and the capital at risk. Any actions
-                                you take based on the information discussed in this community are entirely at your own
-                                discretion.
-                            </li>
-                            <li>
-                                <strong class="text-primary font-semibold">No Rights to the Name:</strong> We own
-                                absolutely no proprietary rights, trademarks, or copyrights to the name &quot;Reddit
-                                FlexiCap&quot;. It was simply a random name that the community seemed to like during
-                                informal discussions, so we have put it here purely as an informal case study
-                                identifier. This initiative is not affiliated with, sponsored by, or endorsed by Reddit
-                                Inc.
-                            </li>
-                        </ul>
-                    </div>
-
-                    <!-- SEBI Regulatory Compliance -->
-                    <div class="space-y-4">
-                        <h3 class="font-semibold text-primary text-base flex items-center gap-2">
-                            <span class="material-symbols-outlined text-secondary text-lg">gavel</span>
-                            <span>SEBI Regulatory Compliance</span>
-                        </h3>
-                        <p class="text-xs text-on-surface-variant italic">
-                            To align with the regulatory frameworks set forth by the Securities and Exchange Board of
-                            India (SEBI), please acknowledge the following:
-                        </p>
-                        <ul class="space-y-3 text-xs sm:text-sm text-on-surface-variant leading-relaxed">
-                            <li>
-                                <strong class="text-primary font-semibold">Unregistered Status:</strong> The
-                                administrators, creators, and contributors of this community are <strong>NOT SEBI
-                                    Registered Investment Advisors (RIA)</strong> or <strong>SEBI Registered Research
-                                    Analysts (RA)</strong>. We are unauthorized to provide customized financial advice
-                                or actionable research reports.
-                            </li>
-                            <li>
-                                <strong class="text-primary font-semibold">Equal-Weighted Tracking:</strong> The
-                                &quot;vote-weighted&quot; nature of this watchlist is purely a mathematical method for
-                                the community to theoretically track the collective performance of our case studies. It
-                                is not a recommended asset allocation or weightage strategy for your real capital.
-                                <em>Exact Votes and vote weightages are not displayed anywhere as it is against SEBI
-                                    guidelines, but the performance will be shared for both Equally weighted and Vote
-                                    weighted return based on SEBI guidelines.</em>
-                            </li>
-                            <li>
-                                <strong class="text-primary font-semibold">Market Risk Mandate:</strong> As mandated by
-                                SEBI, <em>&quot;Investments in the securities market are subject to market risks. Read
-                                    all the related documents carefully before investing.&quot;</em>
-                            </li>
-                            <li>
-                                <strong class="text-primary font-semibold">No Guarantee of Returns:</strong> Past
-                                performance, theoretical tracking, or community consensus regarding any stock is not
-                                indicative of future results or guaranteed returns.
-                            </li>
-                            <li>
-                                <strong class="text-primary font-semibold">Recommendation:</strong> We strongly urge you
-                                to consult with a qualified, SEBI-registered financial professional before executing any
-                                trades or committing capital to the markets.
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- Explicit Non-Disclosure of Vote Weightage Callout -->
-                <div
-                    class="mt-6 p-4 rounded-xl bg-amber-100/60 border border-amber-300 text-xs text-amber-950 flex items-start gap-2.5">
-                    <span class="material-symbols-outlined text-amber-800 text-base mt-0.5">shield</span>
-                    <div class="leading-relaxed">
-                        <strong>Regulatory Boundary &amp; Non-Disclosure Policy:</strong> Vote weightage data is tracked
-                        internally for statistical research, but is strictly <strong>NOT displayed or published
-                            anywhere</strong> on this website. Given the regulatory landscape in India where state
-                        machinery actively scrutinizes financial platforms, we take zero regulatory ambiguities—we do
-                        not publish vote weightages, rankings, or customized portfolios. All stocks are presented purely
-                        on an equal-weighted basis for case study tracking.
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- How It Works Section (#how-it-works) -->
-        <section class="py-20 bg-surface-container-lowest border-y border-outline-variant" id="how-it-works">
-            <div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
-                <div class="text-center max-w-3xl mx-auto mb-16">
-                    <div
-                        class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-surface-container border border-outline-variant mb-4">
-                        <span
-                            class="font-label-sm text-label-sm text-secondary font-semibold uppercase tracking-wider">Educational
-                            Framework</span>
-                    </div>
-                    <h2 class="font-headline-lg text-3xl md:text-headline-lg text-primary font-bold mb-4">How the
-                        Community Watchlist Operates</h2>
-                    <p class="font-body-lg text-on-surface-variant">
-                        By studying independent stock selections from market participants across India, we observe
-                        collective fundamental sentiment on an unweighted, equal-weight basis without distributing
-                        actionable advice.
-                    </p>
-                </div>
-
-                <!-- 3-Step Process Cards -->
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
-                    <!-- Step 1 -->
-                    <div
-                        class="bg-surface rounded-2xl p-8 border border-outline-variant hover:border-secondary transition-all relative flex flex-col">
-                        <div
-                            class="w-12 h-12 rounded-xl bg-surface-container flex items-center justify-center text-primary font-bold text-lg mb-6 border border-outline-variant">
-                            01
-                        </div>
-                        <h3 class="font-headline-md text-xl text-primary font-semibold mb-3">Anonymous Study Nominations
-                        </h3>
-                        <p class="text-on-surface-variant text-sm leading-relaxed flex-grow">
-                            Community members nominate study candidates from the Nifty universe spanning Large, Mid, and
-                            Small Cap segments. Submissions are 100% anonymous to eliminate social bias and herd
-                            behavior.
-                        </p>
-                        <div
-                            class="mt-6 pt-4 border-t border-outline-variant/60 flex items-center gap-2 text-xs font-semibold text-secondary">
-                            <span class="material-symbols-outlined text-base">how_to_vote</span>
-                            <span>Anonymous inputs</span>
-                        </div>
-                    </div>
-
-                    <!-- Step 2 -->
-                    <div
-                        class="bg-surface rounded-2xl p-8 border border-outline-variant hover:border-secondary transition-all relative flex flex-col">
-                        <div
-                            class="w-12 h-12 rounded-xl bg-secondary-container/50 flex items-center justify-center text-secondary font-bold text-lg mb-6 border border-secondary/30">
-                            02
-                        </div>
-                        <h3 class="font-headline-md text-xl text-primary font-semibold mb-3">Vote Weightage Withheld
-                        </h3>
-                        <p class="text-on-surface-variant text-sm leading-relaxed flex-grow">
-                            To maintain strict regulatory separation and avoid any perception of personalized advice,
-                            <strong>vote weightage data is tracked in the background but NOT shown anywhere
-                                here</strong>. The public list remains strictly equal-weighted.
-                        </p>
-                        <div
-                            class="mt-6 pt-4 border-t border-outline-variant/60 flex items-center gap-2 text-xs font-semibold text-secondary">
-                            <span class="material-symbols-outlined text-base">visibility_off</span>
-                            <span>No published vote weights</span>
-                        </div>
-                    </div>
-
-                    <!-- Step 3 -->
-                    <div
-                        class="bg-surface rounded-2xl p-8 border border-outline-variant hover:border-secondary transition-all relative flex flex-col">
-                        <div
-                            class="w-12 h-12 rounded-xl bg-surface-container flex items-center justify-center text-primary font-bold text-lg mb-6 border border-outline-variant">
-                            03
-                        </div>
-                        <h3 class="font-headline-md text-xl text-primary font-semibold mb-3">Open Case Study Tracking
-                        </h3>
-                        <p class="text-on-surface-variant text-sm leading-relaxed flex-grow">
-                            Once 50 community responses are collected, theoretical tracking begins against Nifty 500
-                            TRI. Data is shared openly for learning, academic review, and quarterly community
-                            rebalancing case studies.
-                        </p>
-                        <div
-                            class="mt-6 pt-4 border-t border-outline-variant/60 flex items-center gap-2 text-xs font-semibold text-secondary">
-                            <span class="material-symbols-outlined text-base">analytics</span>
-                            <span>Comparative case studies</span>
+                            <div class="flex items-center justify-between text-xs text-on-surface-variant pt-2 border-t border-outline-variant/40">
+                                <div class="flex items-center gap-3">
+                                    <span class="flex items-center gap-1">
+                                        <span class="w-2 h-2 rounded-full bg-secondary"></span>
+                                        <span id="hero-gainers-count"><strong>21</strong> Gainers</span>
+                                    </span>
+                                    <span class="flex items-center gap-1">
+                                        <span class="w-2 h-2 rounded-full bg-red-500"></span>
+                                        <span id="hero-losers-count"><strong>13</strong> Losers</span>
+                                    </span>
+                                </div>
+                                <span class="text-[11px] text-outline font-medium">Equal Baseline (2.94% each)</span>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
+
+
 
         <!-- Live Tracker & Watchlist Preview Section (#tracker) -->
         <section class="py-20 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto" id="tracker">
@@ -703,6 +515,9 @@
                                 <th class="py-3.5 px-6">Category</th>
                                 <th class="py-3.5 px-6">Industry / Sector</th>
                                 <th class="py-3.5 px-6">Equal Weight (Baseline)</th>
+                                <th class="py-3.5 px-6 text-right">Price (30 Sept)</th>
+                                <th class="py-3.5 px-6 text-right">Price (18 Nov)</th>
+                                <th class="py-3.5 px-6 text-right">Change %</th>
                                 <th class="py-3.5 px-6 text-right">Watchlist Status</th>
                             </tr>
                         </thead>
@@ -719,6 +534,271 @@
                     <span class="text-[11px] text-outline">🔒 Vote weightage tracked internally &bull; Not displayed to
                         avoid regulatory ambiguity</span>
                 </div>
+
+
+                <!-- Dedicated Prominent Disclaimer & SEBI Disclosures Block on First Page -->
+                <section class="py-12 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto"
+                    id="disclaimers">
+                    <div
+                        class="rounded-2xl border-2 border-amber-500/40 bg-gradient-to-b from-amber-50/70 to-surface-container-lowest p-6 sm:p-10 shadow-sm relative overflow-hidden">
+                        <div class="flex items-center gap-3 mb-4">
+                            <span class="text-2xl sm:text-3xl">⚠️</span>
+                            <div>
+                                <h2 class="font-headline-md text-xl sm:text-2xl font-bold text-amber-950">
+                                    Community Watchlist Disclaimer &amp; SEBI Disclosures
+                                </h2>
+                                <p
+                                    class="text-xs sm:text-sm font-semibold text-amber-800 tracking-wide uppercase mt-0.5">
+                                    For Educational, Theoretical &amp; Case Study Purposes Only
+                                </p>
+                            </div>
+                        </div>
+
+                        <p class="text-sm sm:text-base text-on-surface leading-relaxed mb-6 font-normal">
+                            This equal-weighted community watchlist and all associated discussions are built strictly
+                            for
+                            educational, learning, and entertainment purposes. It is a collaborative experiment to study
+                            market
+                            fundamentals and business metrics. It does not represent a professional recommendation, a
+                            &quot;model portfolio,&quot; or a structurally sound financial plan. Please note: we own no
+                            rights
+                            to the name &quot;Reddit FlexiCap&quot; — it was simply a random name which the community
+                            seemed to
+                            like, and we have put it here solely as an informal project identifier.
+                        </p>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 pt-6 border-t border-amber-500/20">
+                            <!-- Important Disclosures & Risk Warnings -->
+                            <div class="space-y-4">
+                                <h3 class="font-semibold text-primary text-base flex items-center gap-2">
+                                    <span class="material-symbols-outlined text-amber-700 text-lg">warning</span>
+                                    <span>Important Disclosures &amp; Risk Warnings</span>
+                                </h3>
+                                <ul class="space-y-3 text-xs sm:text-sm text-on-surface-variant leading-relaxed">
+                                    <li>
+                                        <strong class="text-primary font-semibold">Not Financial Advice:</strong> The
+                                        information, stock selections, and discussions provided here are not intended to
+                                        be, and
+                                        should not be construed as, financial, investment, or trading advice.
+                                    </li>
+                                    <li>
+                                        <strong class="text-primary font-semibold">No Buy/Sell Actionable
+                                            Calls:</strong> We do
+                                        not provide entry prices, target prices, or stop-loss levels. Discussions are
+                                        focused on
+                                        theoretical analysis, not on predicting short-term price movements.
+                                    </li>
+                                    <li>
+                                        <strong class="text-primary font-semibold">Not Tailored to You:</strong> This
+                                        watchlist
+                                        could be 100% wrong for your personal situation. It does not factor in your
+                                        individual
+                                        financial goals, time horizon, liquidity needs, or risk appetite. Absolutely do
+                                        not rely
+                                        on this list to make your own financial decisions.
+                                    </li>
+                                    <li>
+                                        <strong class="text-primary font-semibold">Do Your Own Research (DYOR):</strong>
+                                        You are
+                                        solely responsible for your own investment choices and the capital at risk. Any
+                                        actions
+                                        you take based on the information discussed in this community are entirely at
+                                        your own
+                                        discretion.
+                                    </li>
+                                    <li>
+                                        <strong class="text-primary font-semibold">No Rights to the Name:</strong> We
+                                        own
+                                        absolutely no proprietary rights, trademarks, or copyrights to the name
+                                        &quot;Reddit
+                                        FlexiCap&quot;. It was simply a random name that the community seemed to like
+                                        during
+                                        informal discussions, so we have put it here purely as an informal case study
+                                        identifier. This initiative is not affiliated with, sponsored by, or endorsed by
+                                        Reddit
+                                        Inc.
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <!-- SEBI Regulatory Compliance -->
+                            <div class="space-y-4">
+                                <h3 class="font-semibold text-primary text-base flex items-center gap-2">
+                                    <span class="material-symbols-outlined text-secondary text-lg">gavel</span>
+                                    <span>SEBI Regulatory Compliance</span>
+                                </h3>
+                                <p class="text-xs text-on-surface-variant italic">
+                                    To align with the regulatory frameworks set forth by the Securities and Exchange
+                                    Board of
+                                    India (SEBI), please acknowledge the following:
+                                </p>
+                                <ul class="space-y-3 text-xs sm:text-sm text-on-surface-variant leading-relaxed">
+                                    <li>
+                                        <strong class="text-primary font-semibold">Unregistered Status:</strong> The
+                                        administrators, creators, and contributors of this community are <strong>NOT
+                                            SEBI
+                                            Registered Investment Advisors (RIA)</strong> or <strong>SEBI Registered
+                                            Research
+                                            Analysts (RA)</strong>. We are unauthorized to provide customized financial
+                                        advice
+                                        or actionable research reports.
+                                    </li>
+                                    <li>
+                                        <strong class="text-primary font-semibold">Equal-Weighted Tracking:</strong> The
+                                        &quot;vote-weighted&quot; nature of this watchlist is purely a mathematical
+                                        method for
+                                        the community to theoretically track the collective performance of our case
+                                        studies. It
+                                        is not a recommended asset allocation or weightage strategy for your real
+                                        capital.
+                                        <em>Exact Votes and vote weightages are not displayed anywhere as it is against
+                                            SEBI
+                                            guidelines, but the performance will be shared for both Equally weighted and
+                                            Vote
+                                            weighted return based on SEBI guidelines.</em>
+                                    </li>
+                                    <li>
+                                        <strong class="text-primary font-semibold">Market Risk Mandate:</strong> As
+                                        mandated by
+                                        SEBI, <em>&quot;Investments in the securities market are subject to market
+                                            risks. Read
+                                            all the related documents carefully before investing.&quot;</em>
+                                    </li>
+                                    <li>
+                                        <strong class="text-primary font-semibold">No Guarantee of Returns:</strong>
+                                        Past
+                                        performance, theoretical tracking, or community consensus regarding any stock is
+                                        not
+                                        indicative of future results or guaranteed returns.
+                                    </li>
+                                    <li>
+                                        <strong class="text-primary font-semibold">Recommendation:</strong> We strongly
+                                        urge you
+                                        to consult with a qualified, SEBI-registered financial professional before
+                                        executing any
+                                        trades or committing capital to the markets.
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Explicit Non-Disclosure of Vote Weightage Callout -->
+                        <div
+                            class="mt-6 p-4 rounded-xl bg-amber-100/60 border border-amber-300 text-xs text-amber-950 flex items-start gap-2.5">
+                            <span class="material-symbols-outlined text-amber-800 text-base mt-0.5">shield</span>
+                            <div class="leading-relaxed">
+                                <strong>Regulatory Boundary &amp; Non-Disclosure Policy:</strong> Vote weightage data is
+                                tracked
+                                internally for statistical research, but is strictly <strong>NOT displayed or published
+                                    anywhere</strong> on this website. Given the regulatory landscape in India where
+                                state
+                                machinery actively scrutinizes financial platforms, we take zero regulatory
+                                ambiguities—we do
+                                not publish vote weightages, rankings, or customized portfolios. All stocks are
+                                presented purely
+                                on an equal-weighted basis for case study tracking.
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- How It Works Section (#how-it-works) -->
+                <section class="py-20 bg-surface-container-lowest border-y border-outline-variant" id="how-it-works">
+                    <div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+                        <div class="text-center max-w-3xl mx-auto mb-16">
+                            <div
+                                class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-surface-container border border-outline-variant mb-4">
+                                <span
+                                    class="font-label-sm text-label-sm text-secondary font-semibold uppercase tracking-wider">Educational
+                                    Framework</span>
+                            </div>
+                            <h2 class="font-headline-lg text-3xl md:text-headline-lg text-primary font-bold mb-4">How
+                                the
+                                Community Watchlist Operates</h2>
+                            <p class="font-body-lg text-on-surface-variant">
+                                By studying independent stock selections from market participants across India, we
+                                observe
+                                collective fundamental sentiment on an unweighted, equal-weight basis without
+                                distributing
+                                actionable advice.
+                            </p>
+                        </div>
+
+                        <!-- 3-Step Process Cards -->
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
+                            <!-- Step 1 -->
+                            <div
+                                class="bg-surface rounded-2xl p-8 border border-outline-variant hover:border-secondary transition-all relative flex flex-col">
+                                <div
+                                    class="w-12 h-12 rounded-xl bg-surface-container flex items-center justify-center text-primary font-bold text-lg mb-6 border border-outline-variant">
+                                    01
+                                </div>
+                                <h3 class="font-headline-md text-xl text-primary font-semibold mb-3">Anonymous Study
+                                    Nominations
+                                </h3>
+                                <p class="text-on-surface-variant text-sm leading-relaxed flex-grow">
+                                    Community members nominate study candidates from the Nifty universe spanning Large,
+                                    Mid, and
+                                    Small Cap segments. Submissions are 100% anonymous to eliminate social bias and herd
+                                    behavior.
+                                </p>
+                                <div
+                                    class="mt-6 pt-4 border-t border-outline-variant/60 flex items-center gap-2 text-xs font-semibold text-secondary">
+                                    <span class="material-symbols-outlined text-base">how_to_vote</span>
+                                    <span>Anonymous inputs</span>
+                                </div>
+                            </div>
+
+                            <!-- Step 2 -->
+                            <div
+                                class="bg-surface rounded-2xl p-8 border border-outline-variant hover:border-secondary transition-all relative flex flex-col">
+                                <div
+                                    class="w-12 h-12 rounded-xl bg-secondary-container/50 flex items-center justify-center text-secondary font-bold text-lg mb-6 border border-secondary/30">
+                                    02
+                                </div>
+                                <h3 class="font-headline-md text-xl text-primary font-semibold mb-3">Vote Weightage
+                                    Withheld
+                                </h3>
+                                <p class="text-on-surface-variant text-sm leading-relaxed flex-grow">
+                                    To maintain strict regulatory separation and avoid any perception of personalized
+                                    advice,
+                                    <strong>vote weightage data is tracked in the background but NOT shown anywhere
+                                        here</strong>. The public list remains strictly equal-weighted.
+                                </p>
+                                <div
+                                    class="mt-6 pt-4 border-t border-outline-variant/60 flex items-center gap-2 text-xs font-semibold text-secondary">
+                                    <span class="material-symbols-outlined text-base">visibility_off</span>
+                                    <span>No published vote weights</span>
+                                </div>
+                            </div>
+
+                            <!-- Step 3 -->
+                            <div
+                                class="bg-surface rounded-2xl p-8 border border-outline-variant hover:border-secondary transition-all relative flex flex-col">
+                                <div
+                                    class="w-12 h-12 rounded-xl bg-surface-container flex items-center justify-center text-primary font-bold text-lg mb-6 border border-outline-variant">
+                                    03
+                                </div>
+                                <h3 class="font-headline-md text-xl text-primary font-semibold mb-3">Open Case Study
+                                    Tracking
+                                </h3>
+                                <p class="text-on-surface-variant text-sm leading-relaxed flex-grow">
+                                    Once 50 community responses are collected, theoretical tracking begins against Nifty
+                                    500
+                                    TRI. Data is shared openly for learning, academic review, and quarterly community
+                                    rebalancing case studies.
+                                </p>
+                                <div
+                                    class="mt-6 pt-4 border-t border-outline-variant/60 flex items-center gap-2 text-xs font-semibold text-secondary">
+                                    <span class="material-symbols-outlined text-base">analytics</span>
+                                    <span>Comparative case studies</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+
             </div>
         </section>
     </main>
@@ -905,40 +985,40 @@
         // In strict accordance with the user instructions:
         // Vote weightage data is NOT mentioned anywhere. All constituents are presented with equal baseline weight.
         const COMMUNITY_STOCKS = [
-            { symbol: "HDFCBANK", name: "HDFC Bank Ltd", category: "Large Cap", sector: "Private Banking & Finance" },
-            { symbol: "ATHER", name: "Ather Energy", category: "Small Cap", sector: "Electric Mobility & Auto" },
-            { symbol: "GROWW", name: "Groww (Billionbrains Garage)", category: "Small Cap", sector: "Fintech & Brokerage" },
-            { symbol: "BSE", name: "BSE Limited", category: "Mid Cap", sector: "Capital Markets & Exchange" },
-            { symbol: "ZOMATO", name: "Zomato Ltd", category: "Large Cap", sector: "Consumer Tech & Quick Commerce" },
-            { symbol: "ITC", name: "ITC Ltd", category: "Large Cap", sector: "FMCG & Conglomerate" },
-            { symbol: "APOLLO", name: "Apollo Micro Systems Ltd", category: "Small Cap", sector: "Defence & Aerospace Electronics" },
-            { symbol: "CDSL", name: "Central Depository Services", category: "Mid Cap", sector: "Capital Markets Infrastructure" },
-            { symbol: "VBL", name: "Varun Beverages Ltd", category: "Large Cap", sector: "FMCG & Beverages" },
-            { symbol: "BAJFINANCE", name: "Bajaj Finance Ltd", category: "Large Cap", sector: "Non-Banking Financial (NBFC)" },
-            { symbol: "MCX", name: "Multi Commodity Exchange of India", category: "Mid Cap", sector: "Commodity Exchange" },
-            { symbol: "PARAS", name: "Paras Defence & Space Tech", category: "Small Cap", sector: "Defence & Space Systems" },
-            { symbol: "SOUTHBANK", name: "South Indian Bank Ltd", category: "Small Cap", sector: "Banking" },
-            { symbol: "SWIGGY", name: "Swiggy Ltd", category: "Large Cap", sector: "Food Delivery & Quick Commerce" },
-            { symbol: "SBI", name: "State Bank of India", category: "Large Cap", sector: "Public Sector Banking" },
-            { symbol: "DIXON", name: "Dixon Technologies Ltd", category: "Mid Cap", sector: "Electronics Manufacturing" },
-            { symbol: "MAZDOCK", name: "Mazagon Dock Shipbuilders", category: "Mid Cap", sector: "Defence Shipbuilding" },
-            { symbol: "PVRINOX", name: "PVR INOX Ltd", category: "Small Cap", sector: "Entertainment & Media" },
-            { symbol: "ASTRAMICRO", name: "Astra Microwave Products", category: "Small Cap", sector: "Defence Electronics" },
-            { symbol: "GVT&D", name: "GE Vernova T&D India", category: "Mid Cap", sector: "Power Transmission Equipment" },
-            { symbol: "PIRAMAL", name: "Piramal Pharma Ltd", category: "Mid Cap", sector: "Pharmaceuticals & CDMO" },
-            { symbol: "TATAMOTORS", name: "Tata Motors Ltd", category: "Large Cap", sector: "Automotive & EVs" },
-            { symbol: "NETWEB", name: "Netweb Technologies India", category: "Small Cap", sector: "Supercomputing & AI Servers" },
-            { symbol: "WAAREE", name: "Waaree Energies Ltd", category: "Mid Cap", sector: "Solar PV & Clean Energy" },
-            { symbol: "DRREDDY", name: "Dr. Reddy's Laboratories", category: "Large Cap", sector: "Pharmaceuticals" },
-            { symbol: "SUZLON", name: "Suzlon Energy Ltd", category: "Mid Cap", sector: "Wind Energy & Renewables" },
-            { symbol: "WIPRO", name: "Wipro Ltd", category: "Large Cap", sector: "IT Services & Consulting" },
-            { symbol: "WABAG", name: "VA Tech Wabag Ltd", category: "Small Cap", sector: "Water Infrastructure" },
-            { symbol: "BALUFORGE", name: "Balu Forge Industries", category: "Small Cap", sector: "Heavy Engineering & Forging" },
-            { symbol: "TDPOWERSYS", name: "TD Power Systems Ltd", category: "Small Cap", sector: "Generators & Power Machinery" },
-            { symbol: "SOLARINDS", name: "Solar Industries India", category: "Mid Cap", sector: "Explosives & Defence Chemicals" },
-            { symbol: "SYRMA", name: "Syrma SGS Technology", category: "Small Cap", sector: "Electronics Manufacturing" },
-            { symbol: "RRKABEL", name: "R R Kabel Ltd", category: "Mid Cap", sector: "Consumer Electricals & Wires" },
-            { symbol: "CIANAGRO", name: "Cian Agro Industries", category: "Small Cap", sector: "Agro Commodities" }
+            { symbol: "HDFCBANK", name: "HDFC Bank Ltd", category: "Large Cap", sector: "Private Banking & Finance", priceSep30: 708.70, priceNov18: 806.40 },
+            { symbol: "ATHER", name: "Ather Energy", category: "Small Cap", sector: "Electric Mobility & Auto", priceSep30: 1425.00, priceNov18: 1908.00 },
+            { symbol: "GROWW", name: "Groww (Billionbrains Garage)", category: "Small Cap", sector: "Fintech & Brokerage", priceSep30: 183.91, priceNov18: 223.52 },
+            { symbol: "BSE", name: "BSE Limited", category: "Mid Cap", sector: "Capital Markets & Exchange", priceSep30: 3089.90, priceNov18: 3810.00 },
+            { symbol: "ZOMATO", name: "Zomato Ltd", category: "Large Cap", sector: "Consumer Tech & Quick Commerce", priceSep30: 327.85, priceNov18: 375.05 },
+            { symbol: "ITC", name: "ITC Ltd", category: "Large Cap", sector: "FMCG & Conglomerate", priceSep30: 262.75, priceNov18: 296.60 },
+            { symbol: "APOLLO", name: "Apollo Micro Systems Ltd", category: "Small Cap", sector: "Defence & Aerospace Electronics", priceSep30: 403.45, priceNov18: 444.75 },
+            { symbol: "CDSL", name: "Central Depository Services", category: "Mid Cap", sector: "Capital Markets Infrastructure", priceSep30: 1264.00, priceNov18: 1423.60 },
+            { symbol: "VBL", name: "Varun Beverages Ltd", category: "Large Cap", sector: "FMCG & Beverages", priceSep30: 432.00, priceNov18: 425.15 },
+            { symbol: "BAJFINANCE", name: "Bajaj Finance Ltd", category: "Large Cap", sector: "Non-Banking Financial (NBFC)", priceSep30: 959.40, priceNov18: 1105.00 },
+            { symbol: "MCX", name: "Multi Commodity Exchange of India", category: "Mid Cap", sector: "Commodity Exchange", priceSep30: 3300.40, priceNov18: 3644.40 },
+            { symbol: "PARAS", name: "Paras Defence & Space Tech", category: "Small Cap", sector: "Defence & Space Systems", priceSep30: 1311.00, priceNov18: 1252.10 },
+            { symbol: "SOUTHBANK", name: "South Indian Bank Ltd", category: "Small Cap", sector: "Banking", priceSep30: 48.24, priceNov18: 60.77 },
+            { symbol: "SWIGGY", name: "Swiggy Ltd", category: "Large Cap", sector: "Food Delivery & Quick Commerce", priceSep30: 250.10, priceNov18: 185.00 },
+            { symbol: "SBI", name: "State Bank of India", category: "Large Cap", sector: "Public Sector Banking", priceSep30: 959.50, priceNov18: 1110.25 },
+            { symbol: "DIXON", name: "Dixon Technologies Ltd", category: "Mid Cap", sector: "Electronics Manufacturing", priceSep30: 13100.00, priceNov18: 12731.00 },
+            { symbol: "MAZDOCK", name: "Mazagon Dock Shipbuilders", category: "Mid Cap", sector: "Defence Shipbuilding", priceSep30: 2113.00, priceNov18: 1826.00 },
+            { symbol: "PVRINOX", name: "PVR INOX Ltd", category: "Small Cap", sector: "Entertainment & Media", priceSep30: 1242.70, priceNov18: 1714.00 },
+            { symbol: "ASTRAMICRO", name: "Astra Microwave Products", category: "Small Cap", sector: "Defence Electronics", priceSep30: 1636.70, priceNov18: 1670.00 },
+            { symbol: "GVT&D", name: "GE Vernova T&D India", category: "Mid Cap", sector: "Power Transmission Equipment", priceSep30: 4201.00, priceNov18: 4287.00 },
+            { symbol: "PIRAMAL", name: "Piramal Pharma Ltd", category: "Mid Cap", sector: "Pharmaceuticals & CDMO", priceSep30: 206.52, priceNov18: 237.00 },
+            { symbol: "TATAMOTORS", name: "Tata Motors Ltd", category: "Large Cap", sector: "Automotive & EVs", priceSep30: 421.65, priceNov18: 442.50 },
+            { symbol: "NETWEB", name: "Netweb Technologies India", category: "Small Cap", sector: "Supercomputing & AI Servers", priceSep30: 4548.00, priceNov18: 4096.00 },
+            { symbol: "WAAREE", name: "Waaree Energies Ltd", category: "Mid Cap", sector: "Solar PV & Clean Energy", priceSep30: 2374.40, priceNov18: 2395.00 },
+            { symbol: "DRREDDY", name: "Dr. Reddy's Laboratories", category: "Large Cap", sector: "Pharmaceuticals", priceSep30: 1233.00, priceNov18: 1392.00 },
+            { symbol: "SUZLON", name: "Suzlon Energy Ltd", category: "Mid Cap", sector: "Wind Energy & Renewables", priceSep30: 39.49, priceNov18: 37.19 },
+            { symbol: "WIPRO", name: "Wipro Ltd", category: "Large Cap", sector: "IT Services & Consulting", priceSep30: 158.50, priceNov18: 187.50 },
+            { symbol: "WABAG", name: "VA Tech Wabag Ltd", category: "Small Cap", sector: "Water Infrastructure", priceSep30: 2061.40, priceNov18: 1868.00 },
+            { symbol: "BALUFORGE", name: "Balu Forge Industries", category: "Small Cap", sector: "Heavy Engineering & Forging", priceSep30: 496.35, priceNov18: 531.00 },
+            { symbol: "TDPOWERSYS", name: "TD Power Systems Ltd", category: "Small Cap", sector: "Generators & Power Machinery", priceSep30: 786.05, priceNov18: 637.50 },
+            { symbol: "SOLARINDS", name: "Solar Industries India", category: "Mid Cap", sector: "Explosives & Defence Chemicals", priceSep30: 19700.00, priceNov18: 18642.00 },
+            { symbol: "SYRMA", name: "Syrma SGS Technology", category: "Small Cap", sector: "Electronics Manufacturing", priceSep30: 1782.90, priceNov18: 1454.45 },
+            { symbol: "RRKABEL", name: "R R Kabel Ltd", category: "Mid Cap", sector: "Consumer Electricals & Wires", priceSep30: 2518.60, priceNov18: 1841.50 },
+            { symbol: "CIANAGRO", name: "Cian Agro Industries", category: "Small Cap", sector: "Agro Commodities", priceSep30: 1068.15, priceNov18: 1009.78 }
         ];
 
         // State variables
@@ -995,6 +1075,16 @@
                     catBadge = '<span class="inline-flex items-center px-2 py-0.5 rounded text-[11px] font-semibold bg-purple-50 text-purple-700 border border-purple-200">Small Cap</span>';
                 }
 
+                // Calculate price change
+                const pctChange = ((stock.priceNov18 - stock.priceSep30) / stock.priceSep30 * 100).toFixed(2);
+                const isPositive = pctChange >= 0;
+                const changeColor = isPositive ? 'text-green-700' : 'text-red-600';
+                const changeBg = isPositive ? 'bg-green-50 border-green-200' : 'bg-red-50 border-red-200';
+                const changeArrow = isPositive ? '▲' : '▼';
+
+                // Format prices with commas
+                const formatPrice = (p) => p.toLocaleString('en-IN', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+
                 tr.innerHTML = `
                     <td class="py-4 px-6 font-medium text-primary flex items-center gap-3">
                         <span class="text-xs text-outline font-semibold w-6">${index + 1}</span>
@@ -1014,6 +1104,21 @@
                     <td class="py-4 px-6">
                         <span class="font-mono text-xs font-semibold text-primary bg-surface px-2.5 py-1 rounded border border-outline-variant">
                             ${equalWeightVal}%
+                        </span>
+                    </td>
+                    <td class="py-4 px-6 text-right">
+                        <span class="font-mono text-xs font-semibold text-on-surface">
+                            ₹${formatPrice(stock.priceSep30)}
+                        </span>
+                    </td>
+                    <td class="py-4 px-6 text-right">
+                        <span class="font-mono text-xs font-semibold text-on-surface">
+                            ₹${formatPrice(stock.priceNov18)}
+                        </span>
+                    </td>
+                    <td class="py-4 px-6 text-right">
+                        <span class="inline-flex items-center gap-1 font-mono text-xs font-bold px-2 py-1 rounded border ${changeBg} ${changeColor}">
+                            ${changeArrow} ${isPositive ? '+' : ''}${pctChange}%
                         </span>
                     </td>
                     <td class="py-4 px-6 text-right">
@@ -1115,9 +1220,10 @@
 
         // Export data to CSV (Strictly Equal Weight, no vote weight data)
         function exportDataCSV() {
-            let csv = "Index,Symbol,Company Name,Category,Sector,Equal Weight (%),Status\n";
+            let csv = "Index,Symbol,Company Name,Category,Sector,Equal Weight (%),Price 30 Sept (₹),Price 18 Nov (₹),Change (%),Status\n";
             COMMUNITY_STOCKS.forEach((stock, idx) => {
-                csv += `${idx + 1},${stock.symbol},"${stock.name}",${stock.category},"${stock.sector}",${equalWeightVal}%,"Active Case Study"\n`;
+                const pctChange = ((stock.priceNov18 - stock.priceSep30) / stock.priceSep30 * 100).toFixed(2);
+                csv += `${idx + 1},${stock.symbol},"${stock.name}",${stock.category},"${stock.sector}",${equalWeightVal}%,${stock.priceSep30},${stock.priceNov18},${pctChange}%,"Active Case Study"\n`;
             });
 
             const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
@@ -1311,10 +1417,59 @@
             }
         }
 
+        // Calculate and render equal-weighted portfolio return across all 34 stocks
+        function renderPortfolioReturn() {
+            const validStocks = COMMUNITY_STOCKS.filter(s => s.priceSep30 && s.priceNov18);
+            if (validStocks.length === 0) return;
+
+            let totalReturnPct = 0;
+            let gainers = 0;
+            let losers = 0;
+
+            validStocks.forEach(stock => {
+                const stockReturn = ((stock.priceNov18 - stock.priceSep30) / stock.priceSep30) * 100;
+                totalReturnPct += stockReturn;
+                if (stockReturn > 0) gainers++;
+                else if (stockReturn < 0) losers++;
+            });
+
+            const avgReturn = (totalReturnPct / validStocks.length).toFixed(2);
+            const isPositive = avgReturn >= 0;
+
+            const returnEl = document.getElementById('hero-portfolio-return');
+            if (returnEl) {
+                returnEl.textContent = `${isPositive ? '+' : ''}${avgReturn}%`;
+                returnEl.className = `font-display-lg text-3xl sm:text-4xl font-bold font-mono tracking-tight ${isPositive ? 'text-secondary' : 'text-red-600'}`;
+            }
+
+            const gainersEl = document.getElementById('hero-gainers-count');
+            if (gainersEl) {
+                gainersEl.innerHTML = `<strong>${gainers}</strong> Gainers`;
+            }
+
+            const losersEl = document.getElementById('hero-losers-count');
+            if (losersEl) {
+                losersEl.innerHTML = `<strong>${losers}</strong> Losers`;
+            }
+
+            const gainersBar = document.getElementById('return-gainers-bar');
+            const losersBar = document.getElementById('return-losers-bar');
+            if (gainersBar && losersBar) {
+                const totalEvaluated = gainers + losers;
+                if (totalEvaluated > 0) {
+                    const gPct = ((gainers / totalEvaluated) * 100).toFixed(1);
+                    const lPct = ((losers / totalEvaluated) * 100).toFixed(1);
+                    gainersBar.style.width = `${gPct}%`;
+                    losersBar.style.width = `${lPct}%`;
+                }
+            }
+        }
+
         // Initialization
         window.addEventListener('DOMContentLoaded', () => {
             initResponseCounter();
             renderStocksTable();
+            renderPortfolioReturn();
             updateCountdown();
             setInterval(updateCountdown, 60000);
         });
